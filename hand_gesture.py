@@ -14,7 +14,7 @@ hands = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.7, min_tracki
 finger_tips = [4, 8, 12, 16, 20]  # Thumb, Index, Middle, Ring, Pinky
 
 # Open camera
-cap = cv2.VideoCapture(2)  # Try (1) if 0 doesn't work
+cap = cv2.VideoCapture(0)  # Try (1) if 0 doesn't work
 
 if not cap.isOpened():
     print("❌ Could not open camera. Try changing the index in VideoCapture().")
@@ -86,3 +86,4 @@ while True:
 # Release camera
 cap.release()
 cv2.destroyAllWindows()
+
